@@ -127,7 +127,7 @@ describe('Acceptance: Team', function () {
 
             // view title should exist and be linkable and active
             expect(
-                find('[data-test-screen-title] a[href="/ghost/team"]').hasClass('active'),
+                find('[data-test-screen-title] a[href="/reborn/team"]').hasClass('active'),
                 'has linkable url back to team main page'
             ).to.be.true;
 

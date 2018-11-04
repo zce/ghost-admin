@@ -33,7 +33,7 @@ module.exports = function (grunt) {
 
             ember: {
                 command: function (mode) {
-                    let liveReloadBaseUrl = grunt.option('live-reload-base-url') || '/ghost/';
+                    let liveReloadBaseUrl = grunt.option('live-reload-base-url') || '/reborn/';
 
                     switch (mode) {
                     case 'prod':

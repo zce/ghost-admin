@@ -15,9 +15,9 @@ let makeRoute = function (root, args) {
 
 export default function () {
     let path = window.location.pathname;
-    let subdir = path.substr(0, path.search('/ghost/'));
-    let adminRoot = `${subdir}/ghost/`;
-    let assetRoot = `${subdir}/ghost/assets/`;
+    let subdir = path.substr(0, path.search('/reborn/'));
+    let adminRoot = `${subdir}/reborn/`;
+    let assetRoot = `${subdir}/reborn/assets/`;
     let apiRoot = `${subdir}/ghost/api/v2/admin`;
 
     function assetUrl(src) {

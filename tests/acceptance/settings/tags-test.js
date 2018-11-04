@@ -123,7 +123,7 @@ describe('Acceptance: Settings - Tags', function () {
                 .to.equal(tag1.name);
 
             // it highlights selected tag
-            expect(find(`a[href="/ghost/settings/tags/${tag1.slug}"]`).hasClass('active'), 'highlights selected tag')
+            expect(find(`a[href="/reborn/settings/tags/${tag1.slug}"]`).hasClass('active'), 'highlights selected tag')
                 .to.be.true;
 
             // it shows selected tag form
@@ -139,7 +139,7 @@ describe('Acceptance: Settings - Tags', function () {
             expect(currentURL(), 'url after clicking tag').to.equal(`/settings/tags/${tag2.slug}`);
 
             // it highlights selected tag
-            expect(find(`a[href="/ghost/settings/tags/${tag2.slug}"]`).hasClass('active'), 'highlights selected tag')
+            expect(find(`a[href="/reborn/settings/tags/${tag2.slug}"]`).hasClass('active'), 'highlights selected tag')
                 .to.be.true;
 
             // it shows selected tag form
@@ -158,7 +158,7 @@ describe('Acceptance: Settings - Tags', function () {
             expect(currentURL(), 'url after keyboard up arrow').to.equal(`/settings/tags/${tag1.slug}`);
 
             // it highlights selected tag
-            expect(find(`a[href="/ghost/settings/tags/${tag1.slug}"]`).hasClass('active'), 'selects previous tag')
+            expect(find(`a[href="/reborn/settings/tags/${tag1.slug}"]`).hasClass('active'), 'selects previous tag')
                 .to.be.true;
 
             // simulate down arrow press
@@ -173,7 +173,7 @@ describe('Acceptance: Settings - Tags', function () {
             expect(currentURL(), 'url after keyboard down arrow').to.equal(`/settings/tags/${tag2.slug}`);
 
             // it highlights selected tag
-            expect(find(`a[href="/ghost/settings/tags/${tag2.slug}"]`).hasClass('active'), 'selects next tag')
+            expect(find(`a[href="/reborn/settings/tags/${tag2.slug}"]`).hasClass('active'), 'selects next tag')
                 .to.be.true;
 
             // trigger save
@@ -219,7 +219,7 @@ describe('Acceptance: Settings - Tags', function () {
                 .to.equal(3);
             expect(find('.settings-tags .settings-tag:last .tag-title').text(), 'new tag list item title')
                 .to.equal('New Tag');
-            expect(find('a[href="/ghost/settings/tags/new-tag"]').hasClass('active'), 'highlights new tag')
+            expect(find('a[href="/reborn/settings/tags/new-tag"]').hasClass('active'), 'highlights new tag')
                 .to.be.true;
 
             // delete tag
@@ -252,7 +252,7 @@ describe('Acceptance: Settings - Tags', function () {
                 .to.equal(2);
 
             // selects tag in list
-            expect(find('a[href="/ghost/settings/tags/tag-1"]').hasClass('active'), 'highlights requested tag')
+            expect(find('a[href="/reborn/settings/tags/tag-1"]').hasClass('active'), 'highlights requested tag')
                 .to.be.true;
 
             // shows requested tag in settings pane
