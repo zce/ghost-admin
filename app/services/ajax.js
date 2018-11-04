@@ -8,7 +8,7 @@ import {isNone} from '@ember/utils';
 import {inject as service} from '@ember/service';
 
 const JSON_CONTENT_TYPE = 'application/json';
-const GHOST_REQUEST = /\/ghost\/api\//;
+const GHOST_REQUEST = /\/api\//;
 
 function isJSONContentType(header) {
     if (!header || isNone(header)) {
