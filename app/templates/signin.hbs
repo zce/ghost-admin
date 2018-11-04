@@ -1,6 +1,7 @@
-<div class="gh-flow">
+<div class="gh-flow gh-signin-wrapper">
     <div class="gh-flow-content-wrap">
         <section class="gh-flow-content">
+            <img class="gh-signin-logo" src="http://img.zce.me/logo.svg" alt="zce.me" height="120">
             <form id="login" method="post" class="gh-signin" novalidate="novalidate" {{action "authenticate" on="submit"}}>
                 {{#gh-form-group errors=signin.errors hasValidated=hasValidated property="identification"}}
                     <span class="gh-input-icon gh-icon-mail">
