@@ -117,7 +117,7 @@ describe('Acceptance: Settings - Tags', function () {
                 .to.equal(tag1.name);
 
             // it highlights selected tag
-            expect(find(`a[href="/ghost/settings/tags/${tag1.slug}"]`), 'highlights selected tag')
+            expect(find(`a[href="/reborn/settings/tags/${tag1.slug}"]`), 'highlights selected tag')
                 .to.have.class('active');
 
             // it shows selected tag form
@@ -134,7 +134,7 @@ describe('Acceptance: Settings - Tags', function () {
             expect(currentURL(), 'url after clicking tag').to.equal(`/settings/tags/${tag2.slug}`);
 
             // it highlights selected tag
-            expect(find(`a[href="/ghost/settings/tags/${tag2.slug}"]`), 'highlights selected tag')
+            expect(find(`a[href="/reborn/settings/tags/${tag2.slug}"]`), 'highlights selected tag')
                 .to.have.class('active');
 
             // it shows selected tag form
@@ -153,7 +153,7 @@ describe('Acceptance: Settings - Tags', function () {
             expect(currentURL(), 'url after keyboard up arrow').to.equal(`/settings/tags/${tag1.slug}`);
 
             // it highlights selected tag
-            expect(find(`a[href="/ghost/settings/tags/${tag1.slug}"]`), 'selects previous tag')
+            expect(find(`a[href="/reborn/settings/tags/${tag1.slug}"]`), 'selects previous tag')
                 .to.have.class('active');
 
             // simulate down arrow press
@@ -168,7 +168,7 @@ describe('Acceptance: Settings - Tags', function () {
             expect(currentURL(), 'url after keyboard down arrow').to.equal(`/settings/tags/${tag2.slug}`);
 
             // it highlights selected tag
-            expect(find(`a[href="/ghost/settings/tags/${tag2.slug}"]`), 'selects next tag')
+            expect(find(`a[href="/reborn/settings/tags/${tag2.slug}"]`), 'selects next tag')
                 .to.have.class('active');
 
             // trigger save
@@ -225,7 +225,7 @@ describe('Acceptance: Settings - Tags', function () {
             expect(findAll('.settings-tags .settings-tag')[1].querySelector('.tag-title').textContent.trim(), 'new tag list item title');
             expect(tag.querySelector('.tag-title').textContent, 'new tag list item title')
                 .to.equal('New Tag');
-            expect(find('a[href="/ghost/settings/tags/new-tag"]'), 'highlights new tag')
+            expect(find('a[href="/reborn/settings/tags/new-tag"]'), 'highlights new tag')
                 .to.have.class('active');
 
             // delete tag
@@ -258,7 +258,7 @@ describe('Acceptance: Settings - Tags', function () {
                 .to.equal(2);
 
             // selects tag in list
-            expect(find('a[href="/ghost/settings/tags/tag-1"]').classList.contains('active'), 'highlights requested tag')
+            expect(find('a[href="/reborn/settings/tags/tag-1"]').classList.contains('active'), 'highlights requested tag')
                 .to.be.true;
 
             // shows requested tag in settings pane
