@@ -136,7 +136,7 @@ export default Route.extend(ApplicationRouteMixin, ShortcutsRoute, {
                 let url = router.urlFor(routeInfo.name, ...params)
                     .replace(/^#\//, '')
                     .replace(/^\//, '')
-                    .replace(/^ghost\//, '');
+                    .replace(/^reborn\//, '');
 
                 return this.replaceWith('error404', url);
             }
