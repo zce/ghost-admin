@@ -23,7 +23,7 @@ describe('Integration: Service: store', function () {
         let {version} = config.APP;
         let store = this.subject();
 
-        server.get('/ghost/api/v2/admin/posts/1/', function () {
+        server.get('/api/v2/admin/posts/1/', function () {
             return [
                 404,
                 {'Content-Type': 'application/json'},

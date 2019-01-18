@@ -14,7 +14,7 @@ const mockAjax = Service.extend({
 });
 
 const mockGhostPaths = Service.extend({
-    apiRoot: '/ghost/api/v2/admin'
+    apiRoot: '/api/v2/admin'
 });
 
 describe('Unit: Authenticator: cookie', () => {
@@ -40,7 +40,7 @@ describe('Unit: Authenticator: cookie', () => {
             let post = authenticator.ajax.post;
 
             return authenticator.authenticate('AzureDiamond', 'hunter2').then(() => {
-                expect(post.args[0][0]).to.equal('/ghost/api/v2/admin/session');
+                expect(post.args[0][0]).to.equal('/api/v2/admin/session');
                 expect(post.args[0][1]).to.deep.include({
                     data: {
                         username: 'AzureDiamond',
@@ -63,7 +63,7 @@ describe('Unit: Authenticator: cookie', () => {
             let del = authenticator.ajax.del;
 
             return authenticator.invalidate().then(() => {
-                expect(del.args[0][0]).to.equal('/ghost/api/v2/admin/session');
+                expect(del.args[0][0]).to.equal('/api/v2/admin/session');
             });
         });
     });

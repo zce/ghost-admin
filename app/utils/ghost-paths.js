@@ -18,7 +18,7 @@ export default function () {
     let subdir = path.substr(0, path.search('/reborn/'));
     let adminRoot = `${subdir}/reborn/`;
     let assetRoot = `${subdir}/reborn/assets/`;
-    let apiRoot = `${subdir}/ghost/api/v2/admin`;
+    let apiRoot = `${subdir}/api/v2/admin`;
 
     function assetUrl(src) {
         return subdir + src;
