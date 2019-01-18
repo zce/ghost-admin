@@ -683,3 +683,8 @@
 .CodeMirror .CodeMirror-selected {
     background: color-mod(var(--blue) lightness(+30%));
 }
+
+/* koenig card menu */
+.koenig-cardmenu {
+    width: 327px;
+}
