@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import Controller from '@ember/controller';
 import randomPassword from 'ghost-admin/utils/random-password';
-import validator from 'npm:validator';
+import validator from 'validator';
 import {
     IMAGE_EXTENSIONS,
     IMAGE_MIME_TYPES
@@ -274,7 +274,7 @@ export default Controller.extend({
 
             // this forces the document title to recompute after
             // a blog title change
-            this.send('collectTitleTokens', []);
+            this.send('updateDocumentTitle');
 
             return settings;
         } catch (error) {

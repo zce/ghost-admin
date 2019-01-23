@@ -57,7 +57,7 @@ describe('Acceptance: Settings - Integrations - Slack', function () {
             return await authenticateSession();
         });
 
-        it('it validates and saves a slack url properly', async function () {
+        it('it validates and saves slack settings properly', async function () {
             await visit('/settings/integrations/slack');
 
             // has correct url
@@ -66,11 +66,12 @@ describe('Acceptance: Settings - Integrations - Slack', function () {
             await fillIn('[data-test-slack-url-input]', 'notacorrecturl');
             await click('[data-test-save-button]');
 
-            expect(find('[data-test-error="slack-url"').textContent.trim(), 'inline validation response')
+            expect(find('[data-test-error="slack-url"]').textContent.trim(), 'inline validation response')
                 .to.equal('The URL must be in a format like https://hooks.slack.com/services/<your personal key>');
 
             // CMD-S shortcut works
             await fillIn('[data-test-slack-url-input]', 'https://hooks.slack.com/services/1275958430');
+            await fillIn('[data-test-slack-username-input]', 'SlackBot');
             await triggerEvent('.gh-app', 'keydown', {
                 keyCode: 83, // s
                 metaKey: ctrlOrCmd === 'command',
@@ -82,14 +83,15 @@ describe('Acceptance: Settings - Integrations - Slack', function () {
             let [result] = JSON.parse(params.settings.findBy('key', 'slack').value);
 
             expect(result.url).to.equal('https://hooks.slack.com/services/1275958430');
-            expect(find('[data-test-error="slack-url"'), 'inline validation response')
+            expect(result.username).to.equal('SlackBot');
+            expect(find('[data-test-error="slack-url"]'), 'inline validation response')
                 .to.not.exist;
 
             await fillIn('[data-test-slack-url-input]', 'https://hooks.slack.com/services/1275958430');
             await click('[data-test-send-notification-button]');
 
             expect(findAll('.gh-notification').length, 'number of notifications').to.equal(1);
-            expect(find('[data-test-error="slack-url"'), 'inline validation response')
+            expect(find('[data-test-error="slack-url"]'), 'inline validation response')
                 .to.not.exist;
 
             this.server.put('/settings/', function () {

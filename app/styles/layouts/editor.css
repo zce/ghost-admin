@@ -378,6 +378,11 @@
 /* SimpleMDE editor
 /* ---------------------------------------------------------- */
 
+/* ensure there's no flash of unstyled textarea while initializing */
+.gh-markdown-editor textarea {
+    opacity: 0;
+}
+
 .gh-editor-title {
     padding: 0;
 }
