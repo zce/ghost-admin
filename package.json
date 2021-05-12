@@ -37,7 +37,7 @@
     "broccoli-merge-trees": "3.0.2",
     "broccoli-uglify-sourcemap": "2.2.0",
     "chai-dom": "1.8.1",
-    "codemirror": "5.42.2",
+    "codemirror": "5.58.2",
     "coveralls": "3.0.2",
     "csscomb": "4.2.0",
     "current-device": "0.7.8",
