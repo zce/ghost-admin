@@ -120,7 +120,7 @@
     "simplemde": "https://github.com/kevinansfield/simplemde-markdown-editor.git#ghost",
     "testem": "2.14.0",
     "top-gh-contribs": "2.0.4",
-    "validator": "7.2.0",
+    "validator": "13.7.0",
     "walk-sync": "1.0.1"
   },
   "ember-addon": {
